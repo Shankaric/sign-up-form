@@ -1,0 +1,9 @@
+body{
+    background-color:antiquewhite;
+    overflow-x: hidden;
+}
+.imgcont{
+    background-image: url('https://www.wallpapertip.com/wmimgs/41-414109_best-desk-setup-2019.jpg');
+    background-size:cover;
+    height: 100vh;
+}
