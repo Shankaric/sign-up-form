@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,19 +12,97 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <div class="overall">
+     <div class="overall">
         <div class="row">
             <div class="col-md-4 imgcont">
                 <div class="imgovertxt">
-                    
+                    <span> ODIN</span>
+                    <span><img src="images/logohilife (1).png" alt=""></span>
+                    HILIFE.AI
                 </div>
             </div>
             <div class="col-md-8 maincont">
-                hi
+                <div class="firstdiv">
+                    <P> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde cupiditate cum quisquam nobis nihil id exercitationem expedita perferendis, voluptatibus tempore nisi iste soluta praesentium consequatur quas porro officiis error. Reiciendis omnis odit laboriosam minima!
+                    </P>
+                </div>
+                <div class="centerdiv">
+                    <h4>Let's do this!</h4><br>
+                <form action="" name="check">
+                    <div class="row inputrow">
+                            <div class="col-md-5">
+                                <label for="">First Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control inputname" id="firstname">
+                                    <span class="icon"><i class="fas fa-user"></i></span>
+                                </div>
+                                <label for="" class="error"><i class="fas fa-exclamation-triangle"></i>&ensp;Please fill out this field!</label>
+                            </div>
+                                <div class="col-md-5">
+                                    <label for="">Last Name</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control inputname">
+                                        <span class="icon"><i class="fas fa-user"></i></span>
+                                    </div>
+                              </div>
+                                </div>
+                        <div class="row inputrow">
+                                <div class="col-md-5">
+                                    <label for="">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control inputname" id="email">
+                                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <label for="" class="error1"><i class="fas fa-exclamation-triangle"></i>&ensp;Please fill out this field!</label>
+                                </div>
+                                    <div class="col-md-5">
+                                        <label for="">Phone number</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control inputname" min="10" max="10" id="phone">
+                                            <span class="icon"><i class="fas fa-phone"></i></span>
+                                        </div>
+                                        <label for="" class="error2"><i class="fas fa-exclamation-triangle"></i>&ensp;Please fill out this field!</label>
+                                    </div>
+
+                            </div>
+                            <div class="row inputrow">
+                                <div class="col-md-5">
+                                    <label for="">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control inputname" name="name1" id="pwd">
+                                        <span class="icon"><i class="fas fa-lock"></i></span>
+                                    </div>
+                                <label for="" class="error3"><i class="fas fa-exclamation-triangle"></i>&ensp;Password do not match</label>
+                                </div>
+                                    <div class="col-md-5">
+                                        <label for="">Confirm Password</label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" name="name2" id="cpwd">
+                                            <span class="icon"><i class="fas fa-lock"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                    </form>
+                </div>
+                
+                <br>   <div class="DIV"></div>
+                <div class="lastdiv">
+                    <!-- <h6>Yep! You are a member now!!</h6> -->
+                    <span></span><br>
+                    <button class="btn btn-warning" onclick="checkvald()">Create account</button>
+                    <p> Already have an account? <span class="login"><a href="">Log in</a></span></p>
+                </div>
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
