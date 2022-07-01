@@ -3,6 +3,7 @@ const error1=document.querySelector('.error1');
 const error2=document.querySelector('.error2');
 const error3=document.querySelector('.error3');
 const firstname=document.querySelector('#firstname');
+const lastname=document.querySelector('#lastname');
 const email=document.querySelector('#email');
 const phone=document.querySelector('#phone');
 const pwd=document.querySelector('#pwd');
@@ -11,7 +12,7 @@ const pwdval=document.getElementById('pwd');
 const cpwdval=document.getElementById('cpwd');
 const overall=document.querySelector('.overall');
 var validmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-console.log(email.validity.valid);
+
 document.querySelectorAll('.inputname').forEach(item => {
     item.addEventListener('focusout', function() {
 if(item.value.length==0){
@@ -82,12 +83,24 @@ function checkvald(){
     console.log(pwdval.value.length);
     var numbers = /^[0-9]+$/;
     if(firstname.value.length>0 && email.value.length>0 && phone.value.length>0 && pwd.value.length>0 && cpwd.value.length>0 && phone.value.match(numbers)&&phone.value.length==10){
-        
-        const para = document.createElement("h4");
+      
+        const para = document.createElement("h6");
         const node = document.createTextNode("Hello  "+firstname.value+'! You are a member now!');
         para.appendChild(node);
         const element = document.querySelector(".DIV");
         element.appendChild(para); 
+        firstname.value="";
+        lastname.value="";
+        email.value="";
+        phone.value="";
+        pwd.value="";
+        cpwd.value="";
+        firstname.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
+        lastname.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
+        email.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
+        phone.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
+        pwd.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
+        cpwd.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
     }
     else if(pwdval.value==cpwdval.value && pwdval.value.length>0 && cpwdval.value.length>0  ){
 

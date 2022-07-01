@@ -109,7 +109,9 @@ width: 80px;
     color: rgba(223, 22, 22, 0.769);
     visibility: hidden;
 }
-
+.DIV{
+    padding-bottom: 10px;
+}
 @media only screen and (max-width: 768px) {
     .imgcont {
       display: none;
