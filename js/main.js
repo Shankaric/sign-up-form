@@ -10,6 +10,8 @@ const cpwd=document.querySelector('#cpwd');
 const pwdval=document.getElementById('pwd');
 const cpwdval=document.getElementById('cpwd');
 const overall=document.querySelector('.overall');
+var validmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+console.log(email.validity.valid);
 document.querySelectorAll('.inputname').forEach(item => {
     item.addEventListener('focusout', function() {
 if(item.value.length==0){
@@ -41,7 +43,17 @@ if(item.value.length==0){
         phone.setAttribute('style', 'box-shadow:0px 0px 7px red;');
 
     }
-}
+}else if(email.value){
+    if(email.value.match(validmail)){
+        error1.setAttribute('style','visibility:hidden !important');
+        email.setAttribute('style', 'box-shadow:0px 0px 7px green;');
+    }
+    else{
+        error1.innerHTML="Please Enter a valid mail"
+        error1.setAttribute('style','visibility:visible !important');
+        email.setAttribute('style', 'box-shadow:0px 0px 7px red;');
+
+    }}
 // else if(pwd.value==!0 && cpwd.value==!0){
 //     if(pwdval.value==cpwdval.value && pwdval.value.length==!0 && cpwdval.value.length==!0){
 //         error3.setAttribute('style','visibility:hidden !important');
