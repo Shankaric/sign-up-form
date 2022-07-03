@@ -17,25 +17,25 @@ document.querySelectorAll('.inputname').forEach(item => {
     item.addEventListener('focusout', function() {
 if(item.value.length==0){
     if(firstname.value.length==0){
-        error.setAttribute('style','visibility:visible !important');
+        error.setAttribute('style','visibility:visible');
         firstname.setAttribute('style', 'box-shadow:0px 0px 7px red;');
     }
     else if(email.value.length==0){
-        error1.setAttribute('style','visibility:visible !important');
+        error1.setAttribute('style','visibility:visible');
         email.setAttribute('style', 'box-shadow:0px 0px 7px red;');
     }
     else if(phone.value.length==0){
-        error2.setAttribute('style','visibility:visible !important');
+        error2.setAttribute('style','visibility:visible');
         phone.setAttribute('style', 'box-shadow:0px 0px 7px red;');
     }
-       else{
+    //    else{
         
-        item.setAttribute('style', 'box-shadow:0px 0px 7px green;');
-    }
+    //     item.setAttribute('style', 'box-shadow:0px 0px 7px green;');
+    // }
 }else if(phone.value){
     var numbers = /^[0-9]+$/;
     if(phone.value.match(numbers)&&phone.value.length==10){
-        error2.setAttribute('style','visibility:hidden !important');
+        error2.setAttribute('style','visibility:hidden');
         phone.setAttribute('style', 'box-shadow:0px 0px 7px green;');
     }
     else{
@@ -46,7 +46,7 @@ if(item.value.length==0){
     }
 }else if(email.value){
     if(email.value.match(validmail)){
-        error1.setAttribute('style','visibility:hidden !important');
+        error1.setAttribute('style','visibility:hidden');
         email.setAttribute('style', 'box-shadow:0px 0px 7px green;');
     }
     else{
@@ -69,7 +69,7 @@ if(item.value.length==0){
 //     }
 // }
 else{
-    error.setAttribute('style','visibility:hidden !important');
+    error.setAttribute('style','visibility:hidden');
     error1.setAttribute('style','visibility:hidden !important');
     error2.setAttribute('style','visibility:hidden !important');
     error3.setAttribute('style','visibility:hidden !important');
@@ -82,7 +82,7 @@ else{
 function checkvald(){
     console.log(pwdval.value.length);
     var numbers = /^[0-9]+$/;
-    if(firstname.value.length>0 && email.value.length>0 && phone.value.length>0 && pwd.value.length>0 && cpwd.value.length>0 && phone.value.match(numbers)&&phone.value.length==10){
+    if(firstname.value.length>0 && email.value.length>0 && email.value.match(validmail) && phone.value.length>0 && pwd.value.length>0 && cpwd.value.length>0 && phone.value.match(numbers)&&phone.value.length==10){
       
         const para = document.createElement("h6");
         const node = document.createTextNode("Hello  "+firstname.value+'! You are a member now!');
@@ -94,7 +94,7 @@ function checkvald(){
         email.value="";
         phone.value="";
         pwd.value="";
-        cpwd.value="";
+        cpwd.value="";error2.innerHTML="";
         firstname.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
         lastname.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
         email.setAttribute('style', ' box-shadow: 0 0 5px rgba(142, 134, 134, 0.383);');
